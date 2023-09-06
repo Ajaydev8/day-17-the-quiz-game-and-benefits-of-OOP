@@ -14,11 +14,11 @@ class User:
     # this will print whenever new construction will be happening. (New user being created in this case)
     # self is an actual object that is being created.
     # with that you can add as many parameters as you wish
-    def __init__(self, user_id, username, followers):
+    def __init__(self, user_id, username):
         print(f"new user being created {user_id}")
         self.user_id = user_id
         self.username = username
-        # set to a default value so we don't have to provide it everytime in the parameter
+        # set to a default value, so we don't have to provide it everytime in the parameter
         self.followers = 0
 
 
@@ -27,12 +27,15 @@ user_1 = User("001", "Angela")
 
 print(user_1.user_id)
 print(user_1.username)
+# printing the default value
+print(f"followers = {user_1.followers}")
 # quick reminder: Attribute is a variable that is associated with the object
 
 # creating a new user
 user_2 = User("002", "Jack")
 print(user_2.user_id)
 print(user_2.username)
+print(f"followers = {user_2.followers}")
 
 # In python how can we create a constructor?
 # A Constructor is nothing but initializer
