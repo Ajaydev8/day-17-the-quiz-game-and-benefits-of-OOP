@@ -20,6 +20,14 @@ class User:
         self.username = username
         # set to a default value, so we don't have to provide it everytime in the parameter
         self.followers = 0
+        self.followings = 0
+
+    # method always need to have a self as a parameter unlike function.
+    # it knows when the method is called but which object has called it(if it makes sense).
+    def follow(self, user):
+        user.followers += 1
+        self.followings += 1
+
 
 
 
@@ -28,15 +36,21 @@ user_1 = User("001", "Angela")
 print(user_1.user_id)
 print(user_1.username)
 # printing the default value
-print(f"followers = {user_1.followers}")
 # quick reminder: Attribute is a variable that is associated with the object
 
 # creating a new user
 user_2 = User("002", "Jack")
 print(user_2.user_id)
 print(user_2.username)
-print(f"followers = {user_2.followers}")
 
 # In python how can we create a constructor?
 # A Constructor is nothing but initializer
 # Whenever we are creating a new attributes they must provide 2 parameters
+
+
+# Calling the method
+user_1.follow(user_2)
+print(user_1.followers)
+print(user_1.followings)
+print(user_2.followers)
+print(user_2.followings)
