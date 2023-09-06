@@ -12,27 +12,28 @@
 class User:
     # __init__ function is used to initialize the attributes and is a special function
     # this will print whenever new construction will be happening. (New user being created in this case)
-    def __init__(self):
-        print("new user being created")
+    # self is an actual object that is being created.
+    # with that you can add as many parameters as you wish
+    def __init__(self, user_id, username, followers):
+        print(f"new user being created {user_id}")
+        self.user_id = user_id
+        self.username = username
+        # set to a default value so we don't have to provide it everytime in the parameter
+        self.followers = 0
 
 
 
-user_1 = User()
+user_1 = User("001", "Angela")
 
-# Adding an attribute
-# id is an attribute
-user_1.id = "001"
-user_1.username = "angela"
-
+print(user_1.user_id)
 print(user_1.username)
 # quick reminder: Attribute is a variable that is associated with the object
 
 # creating a new user
-user_2 = User()
-user_2.id = "002"
-user_2.username = "Jack"
-
+user_2 = User("002", "Jack")
+print(user_2.user_id)
 print(user_2.username)
 
 # In python how can we create a constructor?
 # A Constructor is nothing but initializer
+# Whenever we are creating a new attributes they must provide 2 parameters
