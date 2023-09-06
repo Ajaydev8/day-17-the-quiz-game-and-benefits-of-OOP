@@ -10,8 +10,11 @@
 
 # class-name always start with the capital letter
 class User:
-    # pass can be used to replace the empty space and to avoid any errors
-    pass
+    # __init__ function is used to initialize the attributes and is a special function
+    # this will print whenever new construction will be happening. (New user being created in this case)
+    def __init__(self):
+        print("new user being created")
+
 
 
 user_1 = User()
@@ -28,3 +31,8 @@ print(user_1.username)
 user_2 = User()
 user_2.id = "002"
 user_2.username = "Jack"
+
+print(user_2.username)
+
+# In python how can we create a constructor?
+# A Constructor is nothing but initializer
