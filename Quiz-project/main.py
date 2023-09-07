@@ -10,8 +10,6 @@ for key in question_data:
     new_q = Question(q_text=question, q_answer=answer)
     question_bank.append(new_q)
 
-print(question_bank[0].text)
-
 quiz_brain = QuizBrain(question_bank)
 
 new_question = quiz_brain.next_question(question_bank)
