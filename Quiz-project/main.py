@@ -1,5 +1,6 @@
 from data import question_data
 from question_model import Question
+from quiz_brain import QuizBrain
 
 question_bank = []
 
@@ -10,3 +11,7 @@ for key in question_data:
     question_bank.append(new_q)
 print(question_bank[0].text)
 
+quiz_brain = QuizBrain(question_bank)
+
+new_question = quiz_brain.next_question(question_bank)
+print(new_question)
