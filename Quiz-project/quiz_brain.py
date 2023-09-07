@@ -11,7 +11,7 @@ class QuizBrain:
         while is_on:
             if self.question_number < len(self.question_list):
                 current_question = self.question_list[self.question_number]
-                user_answer = input(f"{current_question.text} (TRUE/FALSE)?: ").title()
+                user_answer = input(f"Q.{self.question_number + 1}: {current_question.text} (TRUE/FALSE)?: ").title()
                 if current_question.answer == user_answer:
                     self.question_number += 1
                     self.score += 1
